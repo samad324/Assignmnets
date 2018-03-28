@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var students = [
+        {   
+            _id: 'std1',
+            name: 'Bill Gates',
+            age: 30
+        },
+        {
+            _id: 'std2',
+            name: 'Steve Jobs',
+            age: 30
+        },
+        {
+            _id: 'std3',
+            name: 'Suzanne Collins',
+            age: 30
+        }];
+
+    var courses = [
+        {
+            name: 'Maths',
+            std_id: ['std3', 'std1']
+        },
+        {
+            name: 'Computer Science',
+            std_id: ['std3', 'std2']
+        },
+        {
+            name: 'Commerce',
+            std_id: ['std1']
+        },
+    ];
+
+
+    for (var i = 0; i < courses.length; i++) {
+        students[i].coursesForS = [];
+        for (var j = 0; j < courses.length; j++) {
+            for (var k = 0; k < courses[j].std_id.length; k++) {
+                if (courses[j].std_id[k] == students[i]._id) {
+                    students[i].coursesForS.push(courses[j].name);
+                }
+            }
+        }
+    }
+    console.log("========>updated<=========");
+    console.log(students);
+
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = [
+        { name: 'Asher', age: 22 },
+        { name: 'Zubair', age: 20 },
+        { name: 'Kashif', age: 23 },
+        { name: 'Wasif', age: 17 },
+        { name: 'Hanzala', age: 28 }
+    ];
+    var newArr = [];
+    console.log("========>name and age filtered<======");
+    for(var i = 0; i < arr.length; i++){
+        if((arr[i].age >= 18 && arr[i].age <=28)){
+            for(var j = 0; j<arr[i].name.length; j++){
+                if(arr[i].name[j] === "f"){
+                    newArr.push(arr[i].name);
+                    var str = arr[i].name;
+                    console.log(str)
+                    break;
+                }
+            }
+        }
+    }
+    
+</script>
+
+</html>

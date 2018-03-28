@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = [
+        { name: 'Asher', age: 22 },
+        { name: 'Zubair', age: 20 },
+        { name: 'Kashif', age: 23 },
+        { name: 'Wasif', age: 17 },
+        { name: 'Hanzala', age: 28 }
+    ];
+    arr[3] = {name : 'Sadiq' , age : 23};
+    console.log("=========>Replaced index 3<=======");
+    console.log(arr[3]);
+
+    arr.push({name : "Umair", age : 23});
+    console.log("======>Umair's Object pushed pushed at last<=======");
+    console.log(arr);
+
+    arr.shift();
+    console.log("=====>first index has been deleted<======");
+    console.log(arr)
+
+
+    for(var i = 0; i < arr.length; i ++){
+        arr[i].createdAt = new Date
+    }
+    console.log("========>createdAt key has been Created<=======");
+    console.log(arr);
+</script>
+
+
+
+</html>
